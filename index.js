@@ -7,9 +7,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const todoRoutes = require("./routers");
 
-const PORT = process env.PORT || 5000;
-const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/todo";
+const PORT = parseInt(process.env.PORT, 10) || 5000;
 
 async function main() {
   const MONGODB_URI = (
